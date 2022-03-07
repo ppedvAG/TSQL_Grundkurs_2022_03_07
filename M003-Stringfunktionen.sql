@@ -23,4 +23,7 @@ SELECT STUFF('123456789', DATALENGTH('123456789') - 2, 3, 'xxx'); --Selbigen wie
 
 SELECT REPLICATE('x', 4); --Erstellt einen String mit dem gegebenen Zeichen 4 mal
 
-SELECT CHARINDEX(' ', 'Ein Text zum Durchsuchen'); --Gibt das erste Vorkommen vom gegebenen Zeichen zurück
+SELECT CHARINDEX(' ', REVERSE('Wolfgang Amadeus Mozart')); --Gibt das erste Vorkommen vom gegebenen Zeichen zurück
+
+SELECT LOWER('Testtext'); --Macht den gesamten String lowercase
+SELECT UPPER('Testtext'); --Macht den gesamten String UPPERCASE
