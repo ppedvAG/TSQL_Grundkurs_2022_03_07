@@ -22,3 +22,5 @@ SELECT LEFT('123456789', DATALENGTH('123456789') - 3) + 'xxx'; --Selbiges wie ob
 SELECT STUFF('123456789', DATALENGTH('123456789') - 2, 3, 'xxx'); --Selbigen wie oben nur mit STUFF, -2 statt -3 weil vor dem Zeichen der String eingefügt wird
 
 SELECT REPLICATE('x', 4); --Erstellt einen String mit dem gegebenen Zeichen 4 mal
+
+SELECT CHARINDEX(' ', 'Ein Text zum Durchsuchen'); --Gibt das erste Vorkommen vom gegebenen Zeichen zurück
