@@ -25,7 +25,7 @@ SELECT DATEADD(HOUR, 2, GETDATE()); --Addiert zum angegebenen Datumsteil auf das
 SELECT DATEADD(DAY, 5, '07.03.2022'); --Hier nicht klar was Tag und Monat ist, wird von der Zone des Computers genommen
 --Bei Datumswerten generell ISO-Datum benutzen (YYYY-MM-DD hh-mm-ss)
 
-SELECT DATEADD(HOUR, 10, '2022-03-07 13:30'); --Kann auch Stunden und Minuten angegeben werden
+SELECT DATEADD(HOUR, 20, '2022-03-07 13:30'); --Kann auch Stunden und Minuten angegeben werden
 --Hier wird von Europäischem Datum ausgegangen
 
 SELECT DATEADD(MONTH, 15, '07.03.2022'); --Wenn zu viele Monate angegeben -> Jahr wird erhöht
@@ -41,3 +41,5 @@ SELECT DATEPART(QQ, GETDATE()); --QQ: Quartal
 SELECT DATEPART(DY, GETDATE()); --DY: Tag seit 01.01 zurück
 
 SELECT DATENAME(MONTH, GETDATE()); --DATENAME: Gibt den angegebenen Datumsteil schön aus
+
+SELECT CAST(GETDATE() AS DATE); --Entfernt Zeit vom Datum
