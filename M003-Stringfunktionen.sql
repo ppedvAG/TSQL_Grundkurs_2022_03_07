@@ -1,3 +1,5 @@
+USE Northwind;
+
 SELECT CompanyName, CONCAT(Address, ' ', City, ', ', PostalCode, ' ', Country) AS VolleAdresse FROM Customers; --CONCAT Funktion: Verbindet alle Argumente miteinander, NULL Werte werden ignoriert
 
 SELECT TRIM('      Test     '); --TRIM: Schneidet alle Abstände Links und Rechts weg
