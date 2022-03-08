@@ -21,6 +21,7 @@ Intervalle:
 */
 
 SELECT DATEADD(HOUR, 2, GETDATE()); --Addiert zum angegebenen Datumsteil auf das entsprechende Datum einen Wert hinzu, kann auch eine negative Zahl beinhalten
+SELECT DATEADD(HOUR, -2, GETDATE());
 
 SELECT DATEADD(DAY, 5, '07.03.2022'); --Hier nicht klar was Tag und Monat ist, wird von der Zone des Computers genommen
 --Bei Datumswerten generell ISO-Datum benutzen (YYYY-MM-DD hh-mm-ss)

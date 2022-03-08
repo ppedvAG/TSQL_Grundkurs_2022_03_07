@@ -1,3 +1,5 @@
+USE Northwind;
+
 SELECT Freight, Freight % 5 FROM Orders; --Modulo (%): Gibt den Rest einer Divison zurück
 
 SELECT CompanyName, (Address + ' ' + City + ', ' + PostalCode + ' ' + Country) AS VolleAdresse FROM Customers; -- + mit Strings (Zeichenketten) verbindet sie miteinander
@@ -10,7 +12,7 @@ SELECT * FROM Customers ORDER BY Country DESC; --ORDER BY: Sortiere nach einer S
 
 SELECT *,
 	CASE
-	WHEN Freight <= 50 THEN 'Kleiner 50'
-	WHEN Freight > 50 THEN 'Größer 50'
+		WHEN Freight <= 50 THEN 'Kleiner 50'
+		WHEN Freight > 50 THEN 'Größer 50'
 	END AS Ladungsklasse
 FROM Orders; -- CASE: Überprüfung von einer Spalte -> Erzeugt eine neue Spalte

@@ -6,6 +6,9 @@ SELECT TRIM('      Test     '); --TRIM: Schneidet alle Abstände Links und Rechts
 SELECT RTRIM('    Test    '); --RTRIM trimmt rechts alle Abstände
 SELECT LTRIM('      Test    '); --LTRIM trimmt links alle Abstände
 
+SELECT LOWER('Testtext'); --Macht den gesamten String lowercase
+SELECT UPPER('Testtext'); --Macht den gesamten String UPPERCASE
+
 SELECT LEN('Test '); --Gibt die Länge vom String zurück, zählt keine Leerzeichen mit
 SELECT DATALENGTH('Test '); --Gibt die Länge vom String zurück mit Leerzeichen
 
@@ -26,6 +29,3 @@ SELECT STUFF('123456789', DATALENGTH('123456789') - 2, 3, 'xxx'); --Selbigen wie
 SELECT REPLICATE('x', 4); --Erstellt einen String mit dem gegebenen Zeichen 4 mal
 
 SELECT CHARINDEX(' ', REVERSE('Wolfgang Amadeus Mozart')); --Gibt das erste Vorkommen vom gegebenen Zeichen zurück
-
-SELECT LOWER('Testtext'); --Macht den gesamten String lowercase
-SELECT UPPER('Testtext'); --Macht den gesamten String UPPERCASE

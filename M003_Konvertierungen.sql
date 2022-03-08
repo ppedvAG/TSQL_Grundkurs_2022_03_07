@@ -17,7 +17,7 @@ SELECT BirthDate FROM Employees; --Datetime (YYYY-MM-DD hh:mm:ss)
 
 SELECT CAST('2022-03-07' AS DATE); --Problematisch da möglicherweise falsches Format (yyyy-mm-dd oder yyyy-dd-mm)
 
-SELECT CONVERT(varchar(10), 123.456); --CONVERT: Typ zuerst, dann Wert zu Konvertieren
+SELECT CONVERT(VARCHAR(10), 123.456); --CONVERT: Typ zuerst, dann Wert zu Konvertieren
 
 SELECT CONVERT(VARCHAR, GETDATE()); --Datum zu formatiertem String (Montag Tag Jahr Uhrzeit AM/PM)
 

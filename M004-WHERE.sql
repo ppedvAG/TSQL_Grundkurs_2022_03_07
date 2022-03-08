@@ -3,6 +3,8 @@
 -- IN, LIKE, BETWEEN (alle mit NOT auch noch): nicht so perfomant
 -- AND, OR: Um mehrere Bedingungen zu verknüpfen (oder = eine von beiden Bedingungen, und = beide Bedingungen)
 
+USE Northwind;
+
 SELECT * FROM Orders WHERE Freight <= 50; --WHERE: Filtert Daten nach einer oder mehrerer Bedingungen
 
 SELECT * FROM Orders WHERE Freight <= 50 AND EmployeeID != 4; --WHERE mit mehreren Bedingungen
