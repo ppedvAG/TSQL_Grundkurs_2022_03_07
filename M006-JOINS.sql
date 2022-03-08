@@ -20,7 +20,8 @@ ord.OrderID,
 cust.CustomerID,
 cust.CompanyName,
 ord.ShippedDate
-FROM Orders ord INNER JOIN Customers cust
+FROM Orders ord 
+INNER JOIN Customers cust
 ON ord.CustomerID = cust.CustomerID;
 
 --WHERE und ORDER BY Klausel dabei
@@ -34,6 +35,15 @@ FROM Orders INNER JOIN Customers
 ON Orders.CustomerID = Customers.CustomerID
 WHERE Orders.ShipCountry = 'UK'
 ORDER BY CustomerID; --ORDER BY weis das die ID hier die ID von oben im SELECT ist
+
+--INNER JOIN mit mehreren Joins
+SELECT
+OrderID,
+LastName,
+c.CustomerID,
+CompanyName
+FROM Orders o INNER JOIN Employees e ON o.EmployeeID = e.EmployeeID
+			  INNER JOIN Customers c ON c.CustomerID = o.CustomerID;
 
 --RIGHT JOIN
 --Customer die keine Order getätigt haben, Orders wird mit NULL befüllt
