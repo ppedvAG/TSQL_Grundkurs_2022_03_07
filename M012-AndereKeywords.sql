@@ -51,6 +51,10 @@ WHERE Nachname LIKE 'M%'
 CREATE SEQUENCE TestSeq AS INT START WITH 1 INCREMENT BY 3;
 SELECT NEXT VALUE FOR TestSeq;
 
+--Werte von der Sequenz benutzen (ohne SELECT)
+INSERT INTO Test
+VALUES ('X', 'Y', NEXT VALUE FOR TestSeq);
+
 --DELETE FROM <Tabellenname> WHERE <Bedingung>
 --DELETE ohne WHERE löscht ALLES
 DELETE FROM Test WHERE ID >= 5;
@@ -61,7 +65,7 @@ TRUNCATE TABLE Test;
 
 --Fügt eine neue Spalte hinzu
 --ALTER TABLE <Tabellenname> ADD <Spaltenname> <Typ>
-ALTER TABLE Test ADD Phone VARCHAR(30);
+ALTER TABLE Test ADD Seq int;
 
 --Löscht eine Spalte
 --ALTER TABLE <Tabellenname> DROP COLUMN <Spaltenname>
