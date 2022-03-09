@@ -74,10 +74,16 @@ EXECUTE AllCustomersFromCountryAndCity @Country = 'Germany', @City = 'Berlin';
 
 ------------------------------------------------------------
 
---Temporäre Tabelle
---Wird gelöscht bei trennen der Verbindung
+--Lokale Temporäre Tabelle
+--Wird gelöscht bei Trennen der Verbindung
 SELECT CustomerID, Freight
 INTO #temp1
 FROM Orders;
 
 SELECT * FROM #temp1;
+
+--Globale Temporäre Tabelle
+--Wird gelöscht bei Trennen der Verbindung von allen Benutzern die darauf zugegriffen haben
+SELECT CustomerID, Freight
+INTO ##temp1
+FROM Orders;

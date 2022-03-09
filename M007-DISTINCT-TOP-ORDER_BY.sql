@@ -9,7 +9,7 @@ SELECT * FROM Customers ORDER BY Country, ContactName;
 --Sortierrichtung mit ASC (Ascending) oder DESC (Descending) festlegen
 SELECT * FROM Customers ORDER BY Country DESC, ContactName ASC;
 
---Nach Spaltennummer sortieren
+--Nach Spaltenindex sortieren
 SELECT * FROM Customers ORDER BY 3;
 
 ------------------------------------------

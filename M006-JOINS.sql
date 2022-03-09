@@ -20,8 +20,7 @@ ord.OrderID,
 cust.CustomerID,
 cust.CompanyName,
 ord.ShippedDate
-FROM Orders ord 
-INNER JOIN Customers cust
+FROM Orders ord INNER JOIN Customers cust
 ON ord.CustomerID = cust.CustomerID;
 
 --WHERE und ORDER BY Klausel dabei
@@ -76,5 +75,5 @@ SELECT * FROM Orders CROSS JOIN Customers;
 
 --SELF JOIN: Join mit einer Tabelle statt mit zwei Tabellen
 SELECT emp.EmployeeID, emp.LastName, rep.EmployeeID, rep.LastName 
-FROM Employees emp JOIN Employees rep 
+FROM Employees emp INNER JOIN Employees rep 
 ON emp.ReportsTo = rep.EmployeeID;

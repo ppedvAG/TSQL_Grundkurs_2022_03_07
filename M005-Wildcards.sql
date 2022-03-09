@@ -22,11 +22,11 @@ SELECT * FROM Customers WHERE ContactName LIKE '[a-d]%';
 --^: Exkludiert Zeichen in der Klammer (Kunden von E-Z)
 SELECT * FROM Customers WHERE ContactName LIKE '[^a-d]%' ORDER BY ContactName;
 
+--Mit | kann man die Liste erweitern
+SELECT * FROM Customers WHERE ContactName LIKE '[a-d|x-z]%' ORDER BY ContactName;
+
 --Um % zu suchen: Prozent in Eckige Klammern setzen [%]
 SELECT * FROM Customers WHERE CompanyName LIKE '%[%]%';
 
 --Um ' zu suchen: Hochkomma zwei mal in Eckige Klammern setzen ['']
 SELECT * FROM Customers WHERE CompanyName LIKE '%['']%';
-
---Mit | kann man die Liste erweitern
-SELECT * FROM Customers WHERE ContactName LIKE '[a-d|x-z]%' ORDER BY ContactName;
